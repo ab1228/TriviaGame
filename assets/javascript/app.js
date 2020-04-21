@@ -1,7 +1,7 @@
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unansweredQuestions = 0;
-var time = 60;
+var time = 10;
 var timerInterval = '';
 
 var mygameContent = $('#game-content');
@@ -42,6 +42,10 @@ var indexQandA = 0;
 $(document).on('click', '#btn-start', function () {
     function questionandAnswer(indexQandA) {
         $('#game-content').empty();
+        time = 12;
+
+
+
 
 
         if (indexQandA < myQuestions.length) {
@@ -69,20 +73,27 @@ $(document).on('click', '#btn-start', function () {
 
         }
     }
-    questionandAnswer(indexQandA)
-    watchContent.html('Seconds Left:' + time);
-    timerInterval = setInterval(function () {
 
+    questionandAnswer(indexQandA)
+
+
+    setInterval(function () {
+
+        watchContent.html('Seconds Left:' + time);
         time--;
         if (time === 0) {
             stop();
             alert('Ran out of time!!!')
-            time = 60;
+            time = 10;
             incorrectAnswers++;
             indexQandA++;
             questionandAnswer(indexQandA);
 
         }
+
+
+
+
     }, 1000)
 
 
