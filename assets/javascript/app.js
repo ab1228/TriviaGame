@@ -42,7 +42,7 @@ var indexQandA = 0;
 $(document).on('click', '#btn-start', function () {
     function questionandAnswer(indexQandA) {
         $('#game-content').empty();
-        time = 12;
+        time = 100;
 
 
 
@@ -77,7 +77,7 @@ $(document).on('click', '#btn-start', function () {
     questionandAnswer(indexQandA)
 
 
-    setInterval(function () {
+    timerInterval = setInterval(function () {
 
         watchContent.html('Seconds Left:' + time);
         time--;
@@ -100,6 +100,7 @@ $(document).on('click', '#btn-start', function () {
 
 
     function endscreen() {
+        watchContent.html('')
         stop();
         var overGame = $('<h2>');
         overGame.addClass('game-Over');
@@ -131,6 +132,7 @@ $(document).on('click', '#btn-start', function () {
     }
 
     $(document).on('click', '.btn-success', function () {
+        event.preventDefault();
 
 
         if (indexQandA === myQuestions.length) {
