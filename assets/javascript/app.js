@@ -1,7 +1,7 @@
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unansweredQuestions = 0;
-var time = 20;
+var time = 60;
 var timerInterval = '';
 
 var mygameContent = $('#game-content');
@@ -54,7 +54,7 @@ $(document).on('click', '#btn-start', function () {
                 button.addClass('btn-success');
                 button.attr('data-indexNumber', [i])
                 button.attr('data-value', myQuestions[indexQandA].answerBox[i]);
-                // button.attr(myQuestions[indexQandA].answer);
+                button.attr(myQuestions[indexQandA].answer);
                 $('#game-content').append(button);
                 console.log(button);
 
@@ -77,7 +77,7 @@ $(document).on('click', '#btn-start', function () {
         if (time === 0) {
             stop();
             alert('Ran out of time!!!')
-            time = 20;
+            time = 60;
             incorrectAnswers++;
             indexQandA++;
             questionandAnswer(indexQandA);
