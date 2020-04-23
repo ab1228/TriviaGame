@@ -48,6 +48,7 @@ $(document).on('click', '#btn-start', function () {
 
 
 
+
         if (indexQandA < myQuestions.length) {
             var h1 = $('<h1>');
             h1.text(myQuestions[indexQandA].q);
