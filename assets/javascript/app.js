@@ -42,8 +42,9 @@ var indexQandA = 0;
 $(document).on('click', '#btn-start', function () {
     function questionandAnswer(indexQandA) {
         $('#game-content').empty();
+        goTime();
         time = 100;
-        myTime
+
 
 
 
@@ -81,8 +82,10 @@ $(document).on('click', '#btn-start', function () {
 
 
 
-    var myTime = setInterval(timer, 1000)
+    function goTime() {
+        var myTime = setInterval(timer, 1000)
 
+    }
 
 
     function timer() {
