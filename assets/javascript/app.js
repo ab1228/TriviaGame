@@ -43,6 +43,8 @@ $(document).on('click', '#btn-start', function () {
     function questionandAnswer(indexQandA) {
         $('#game-content').empty();
         time = 100;
+        myTime
+
 
 
 
@@ -78,7 +80,12 @@ $(document).on('click', '#btn-start', function () {
     questionandAnswer(indexQandA)
 
 
-    timerInterval = setInterval(function () {
+
+    var myTime = setInterval(timer, 1000)
+
+
+
+    function timer() {
 
         watchContent.html('Seconds Left:' + time);
         time--;
@@ -95,7 +102,7 @@ $(document).on('click', '#btn-start', function () {
 
 
 
-    }, 1000)
+    }
 
 
 
@@ -129,7 +136,7 @@ $(document).on('click', '#btn-start', function () {
 
 
     function stop() {
-        clearInterval(timerInterval)
+        clearInterval(myTime)
     }
 
     $(document).on('click', '.btn-success', function () {
