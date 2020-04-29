@@ -84,7 +84,7 @@ game = {
         for (var i = 0; i < myQuestions[this.index].answerBox.length; i++) {
             var button = $('<button>');
             button.text(myQuestions[this.index].answerBox[i]);
-            button.addClass('btn-warning');
+            button.addClass('btn-light');
             button.attr('data-indexNumber', [i]);
             button.attr('data-value', myQuestions[this.index].answerBox[i]);
             $('#game-content').append(button);
@@ -202,7 +202,7 @@ $(document).on("click", '#btn-start', function () {
     game.start();
 });
 
-$(document).on('click', '.btn-warning', game.userAnswer);
+$(document).on('click', '.btn-light', game.userAnswer);
 
 
 
