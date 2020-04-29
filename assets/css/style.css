@@ -1,5 +1,18 @@
+body {
+     min-height: 100vh;
+    background: url('../images/arcade-clipart-arcade-screen-11\ copy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+   
+  
+}
+
+
 .container {
-    height: 450px;
+     margin-top: 270px;
+    height: 385px;
+    width: 510px;
 }
 
 .text-center {
