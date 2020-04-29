@@ -78,7 +78,7 @@ game = {
         timer = setInterval(game.countdown, 1000)
 
         $('#game-content').empty();
-        mygameContent.html("<h2>" + myQuestions[this.index].question + "</h2>")
+        mygameContent.html("<h6>" + myQuestions[this.index].question + "</h6>")
 
 
         for (var i = 0; i < myQuestions[this.index].answerBox.length; i++) {
