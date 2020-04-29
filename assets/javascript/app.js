@@ -125,6 +125,8 @@ game = {
     },
 
     correctAnswer: function () {
+        stopWatch.html('');
+
         clearInterval(timer);
 
         game.correct++;
@@ -140,6 +142,8 @@ game = {
     },
 
     wrongAnswer: function () {
+        stopWatch.html('');
+
         clearInterval(timer);
 
         game.incorrect++;
