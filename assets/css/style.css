@@ -25,3 +25,13 @@ body {
 .play {
     color: yellow;
 }
+
+@media screen and (max-width: 980px) {
+    body{
+             min-height: 100vh;
+   
+
+    }
+  
+    
+}
